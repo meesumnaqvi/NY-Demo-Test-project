@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (5.8.1)
+  - CombineCocoa (0.4.1)
+  - CombineDataSources (0.2.5)
+  - CombineExt (1.8.0)
+  - netfox (1.21.0)
+  - Realm (10.46.0):
+    - Realm/Headers (= 10.46.0)
+  - Realm/Headers (10.46.0)
+  - RealmSwift (10.46.0):
+    - Realm (= 10.46.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - CombineCocoa
+  - CombineDataSources
+  - CombineExt
+  - netfox
+  - RealmSwift (~> 10)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CombineCocoa
+    - CombineDataSources
+    - CombineExt
+    - netfox
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  CombineCocoa: e5210dbfb480ff251078929459ac17e750e7af1d
+  CombineDataSources: dcbc3b06a038ffdf620b3b4533d3ecaf76ca6a2e
+  CombineExt: c4daa97ef75754d8ef319bd79edeef82652f3eea
+  netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
+  Realm: 699b80d8e5fc66acafd2d530199e77781a2d69d3
+  RealmSwift: 3230b8fc63759433a6938a0dd2a5dc0dc2b15760
+
+PODFILE CHECKSUM: 848bc3420276235c30af47e11734cf30908a0915
+
+COCOAPODS: 1.15.0
