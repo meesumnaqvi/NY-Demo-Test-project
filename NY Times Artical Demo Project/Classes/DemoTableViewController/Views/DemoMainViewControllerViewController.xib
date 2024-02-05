@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DemoMainViewControllerViewController" customModule="NY_Times_Artical_Demo_Project" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="8by-Lc-415" id="C8d-R5-QCm"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kcp-Dj-HOJ"/>
             </connections>
         </placeholder>
@@ -19,70 +18,58 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYC-K8-7cv">
-                    <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                    <subviews>
-                        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IuM-uN-dGg">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                            <items>
-                                <navigationItem title="Title" id="pG3-D5-l9P"/>
-                            </items>
-                        </navigationBar>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemTealColor"/>
-                    <constraints>
-                        <constraint firstItem="IuM-uN-dGg" firstAttribute="leading" secondItem="eYC-K8-7cv" secondAttribute="leading" id="KGf-RN-ocp"/>
-                        <constraint firstAttribute="height" constant="44" id="Qtq-nA-bSJ"/>
-                        <constraint firstItem="IuM-uN-dGg" firstAttribute="top" secondItem="eYC-K8-7cv" secondAttribute="top" id="ceo-Rn-eNb"/>
-                        <constraint firstAttribute="trailing" secondItem="IuM-uN-dGg" secondAttribute="trailing" id="d1k-U9-Ula"/>
-                        <constraint firstAttribute="bottom" secondItem="IuM-uN-dGg" secondAttribute="bottom" id="t9L-b1-6xK"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RI9-lP-jQL">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="59"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EyR-rF-yEI">
-                    <rect key="frame" x="16" y="119" width="361" height="699"/>
+                    <rect key="frame" x="16" y="67" width="361" height="751"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8by-Lc-415">
-                            <rect key="frame" x="0.0" y="0.0" width="361" height="699"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </tableView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JrB-nn-If3">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="751"/>
+                            <subviews>
+                                <searchBar hidden="YES" contentMode="redraw" placeholder="search" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOd-PN-BE8">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="56"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="E2X-wD-fRM"/>
+                                    </constraints>
+                                    <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="ynb-jX-MfH"/>
+                                    </connections>
+                                </searchBar>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8by-Lc-415">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="751"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableView>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="8by-Lc-415" secondAttribute="bottom" id="Qxa-yP-5E8"/>
-                        <constraint firstAttribute="trailing" secondItem="8by-Lc-415" secondAttribute="trailing" id="gxI-wv-MQk"/>
-                        <constraint firstItem="8by-Lc-415" firstAttribute="top" secondItem="EyR-rF-yEI" secondAttribute="top" id="uDL-k4-6CC"/>
-                        <constraint firstItem="8by-Lc-415" firstAttribute="leading" secondItem="EyR-rF-yEI" secondAttribute="leading" id="yo2-P0-o3g"/>
+                        <constraint firstAttribute="bottom" secondItem="JrB-nn-If3" secondAttribute="bottom" id="Bh9-HR-XUm"/>
+                        <constraint firstItem="JrB-nn-If3" firstAttribute="top" secondItem="EyR-rF-yEI" secondAttribute="top" id="DR3-75-m8W"/>
+                        <constraint firstAttribute="trailing" secondItem="JrB-nn-If3" secondAttribute="trailing" id="aHG-mF-nYE"/>
+                        <constraint firstItem="JrB-nn-If3" firstAttribute="leading" secondItem="EyR-rF-yEI" secondAttribute="leading" id="zNe-5w-Tc0"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" systemColor="systemCyanColor"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EyR-rF-yEI" secondAttribute="trailing" constant="16" id="30d-66-LLo"/>
-                <constraint firstItem="RI9-lP-jQL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6xF-n7-PtL"/>
-                <constraint firstAttribute="trailing" secondItem="RI9-lP-jQL" secondAttribute="trailing" id="8xa-Ri-0pa"/>
-                <constraint firstItem="eYC-K8-7cv" firstAttribute="top" secondItem="RI9-lP-jQL" secondAttribute="bottom" id="BK2-Zp-1E3"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eYC-K8-7cv" secondAttribute="trailing" id="CBW-N7-V0a"/>
+                <constraint firstItem="EyR-rF-yEI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="Hl6-fr-j5d"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="EyR-rF-yEI" secondAttribute="bottom" id="PJg-gl-ciQ"/>
-                <constraint firstItem="eYC-K8-7cv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="PPu-ao-5mA"/>
-                <constraint firstItem="EyR-rF-yEI" firstAttribute="top" secondItem="eYC-K8-7cv" secondAttribute="bottom" constant="16" id="XoJ-jy-Hwp"/>
-                <constraint firstItem="eYC-K8-7cv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="cDf-Aq-XZW"/>
                 <constraint firstItem="EyR-rF-yEI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="fKz-H4-CAG"/>
-                <constraint firstItem="RI9-lP-jQL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="myR-s7-kEb"/>
             </constraints>
             <connections>
-                <outlet property="navigationBar" destination="IuM-uN-dGg" id="zYP-Tz-G5V"/>
+                <outlet property="searchBar" destination="wOd-PN-BE8" id="Zci-T0-zDz"/>
+                <outlet property="tableView" destination="8by-Lc-415" id="0lC-HX-6wt"/>
             </connections>
             <point key="canvasLocation" x="562.59541984732823" y="77.464788732394368"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

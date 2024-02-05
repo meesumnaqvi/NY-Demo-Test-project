@@ -180,8 +180,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CombineCocoa/CombineCocoa.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CombineDataSources/CombineDataSources.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CombineExt/CombineExt.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Realm/Realm.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftLoader/SwiftLoader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/netfox/netfox.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -189,8 +191,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CombineCocoa/CombineCocoa.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CombineDataSources/CombineDataSources.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CombineExt/CombineExt.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Realm/Realm.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftLoader/SwiftLoader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/netfox/netfox.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

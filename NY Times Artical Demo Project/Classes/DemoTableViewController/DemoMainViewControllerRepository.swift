@@ -9,13 +9,12 @@ import Foundation
 import Combine
 
 protocol DemoMainViewControllerRepositoryProtocol {
-    func fetchData() async throws -> DemoMainViewControllerResponse?
-    // Other use cases
+    func fetchData(days: Int) async throws -> DemoMainViewControllerResponse?
 }
 
 class DemoMainViewControllerRepository: DemoMainViewControllerRepositoryProtocol {
-    func fetchData() async throws -> DemoMainViewControllerResponse? {
-        let response = NetworkManager.sharedInstance.fetchDataFromApi()
+    func fetchData(days: Int) async throws -> DemoMainViewControllerResponse? {
+        let response = NetworkManager.sharedInstance.fetchDataFromApi(days: days)
         if response.0 == .success {
             return response.1
         } else {

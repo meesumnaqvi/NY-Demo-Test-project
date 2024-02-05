@@ -8,6 +8,14 @@
 import UIKit
 
 class DemoMainViewControllerView: UIView {
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.register(UINib(nibName: "DemoProjectTableViewCell", bundle: nil), forCellReuseIdentifier: "DemoProjectTableViewCell")
+        }
+    }
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+}
+extension DemoMainViewControllerView {
+    
 }

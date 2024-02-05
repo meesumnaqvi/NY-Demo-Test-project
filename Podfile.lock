@@ -3,20 +3,24 @@ PODS:
   - CombineCocoa (0.4.1)
   - CombineDataSources (0.2.5)
   - CombineExt (1.8.0)
+  - IQKeyboardManagerSwift (6.3.0)
   - netfox (1.21.0)
   - Realm (10.46.0):
     - Realm/Headers (= 10.46.0)
   - Realm/Headers (10.46.0)
   - RealmSwift (10.46.0):
     - Realm (= 10.46.0)
+  - SwiftLoader (1.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - CombineCocoa
   - CombineDataSources
   - CombineExt
+  - IQKeyboardManagerSwift
   - netfox
   - RealmSwift (~> 10)
+  - SwiftLoader
 
 SPEC REPOS:
   trunk:
@@ -24,19 +28,23 @@ SPEC REPOS:
     - CombineCocoa
     - CombineDataSources
     - CombineExt
+    - IQKeyboardManagerSwift
     - netfox
     - Realm
     - RealmSwift
+    - SwiftLoader
 
 SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
   CombineCocoa: e5210dbfb480ff251078929459ac17e750e7af1d
   CombineDataSources: dcbc3b06a038ffdf620b3b4533d3ecaf76ca6a2e
   CombineExt: c4daa97ef75754d8ef319bd79edeef82652f3eea
+  IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   Realm: 699b80d8e5fc66acafd2d530199e77781a2d69d3
   RealmSwift: 3230b8fc63759433a6938a0dd2a5dc0dc2b15760
+  SwiftLoader: f12f3a6fb42576862a3a5eb80c7e59fc881b6982
 
-PODFILE CHECKSUM: 848bc3420276235c30af47e11734cf30908a0915
+PODFILE CHECKSUM: cea3bae7851db15078b85d5c9cd73743ccb5d6fd
 
 COCOAPODS: 1.15.0

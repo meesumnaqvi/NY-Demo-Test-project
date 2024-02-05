@@ -9,20 +9,18 @@ import Foundation
 import Combine
 
 protocol DemoMainViewControllerUseCaseProtocol {
-    func fetchData() async throws -> DemoMainViewControllerResponse?
-    // Other use cases
+    func fetchData(days: Int) async throws -> DemoMainViewControllerResponse?
 }
 
 class DemoMainViewControllerUseCase: DemoMainViewControllerUseCaseProtocol {
     private let repository: DemoMainViewControllerRepositoryProtocol
-
+    
     init(repository: DemoMainViewControllerRepositoryProtocol) {
         self.repository = repository
     }
-
-    func fetchData() async throws -> DemoMainViewControllerResponse?  {
-        try await repository.fetchData()
+    
+    func fetchData(days: Int) async throws -> DemoMainViewControllerResponse?  {
+        try await repository.fetchData(days: days)
     }
-
-    // Implement other use cases
+    
 }

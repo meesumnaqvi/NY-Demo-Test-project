@@ -14,15 +14,14 @@ class DemoMainViewControllerRouter {
         let repository = DemoMainViewControllerRepository()
         let useCase = DemoMainViewControllerUseCase(repository: repository)
         let viewModel = DemoMainViewControllerViewModel(useCase: useCase)
-
+        
         let viewController = DemoMainViewControllerViewController(nibName: "DemoMainViewControllerViewController", bundle: nil)
         viewController.viewModel = viewModel
-
         return viewController
     }
     /*
-    func navigateToViewController(from: UIViewController) {
-        // Navigate to Sample Detail
-    }
-    */
+     func navigateToViewController(from: UIViewController) {
+     // Navigate to Sample Detail
+     }
+     */
 }
